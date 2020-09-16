@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Post from './Post';
+
 const post = {
   title: 'Sights And Attractions near Camden Lock Market',
   author: 'Tony Guzman',
@@ -10,14 +12,11 @@ const post = {
 
 function FeaturedPost() {
   return (
-    <Container className="my-5">
-      <h1 className="display-4">Featured Post</h1>
-      <hr />
-      <div className="my-5">
-        <h2>{post.title}</h2>
-        <p className="text-muted">{`${post.author} - ${post.createdAt}`}</p>
-        <p>{post.body}</p>
-      </div>
+    <Container fluid="md" className="my-5">
+      <p className="text-primary lead text-center text-underline">
+        Featured Post
+      </p>
+      <Post post={post} />
     </Container>
   );
 }
