@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom';
 function Navigation() {
   return (
     <Navbar bg="light" variant="light" expand="sm">
-      <Navbar.Brand href="#">React Blog</Navbar.Brand>
+      <Link to="/" className="navbar-brand">
+        React Blog
+      </Link>
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="ml-auto">
-          <Link to="/" className="p-2 text-secondary text-decoration-none">
+          <Link to="/" className="nav-link">
             Home
           </Link>
-          <Link to="/posts" className="p-2 text-secondary text-decoration-none">
+          <Link to="/posts" className="nav-link">
             Posts
           </Link>
-          <Link to="/about" className="p-2 text-secondary text-decoration-none">
+          <Link to="/about" className="nav-link">
             About
           </Link>
         </Nav>
