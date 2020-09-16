@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import PostList from './components/blog/PostList';
+import FeaturedPost from './components/blog/FeaturedPost';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            Homepage
+            <FeaturedPost />
           </Route>
           <Route path="/posts">
             <PostList />
