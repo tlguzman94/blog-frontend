@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import PostList from './components/blog/PostList';
 import FeaturedPost from './components/blog/FeaturedPost';
 import Post from './components/blog/Post';
+import About from './components/pages/About';
 import { Container } from 'react-bootstrap';
 
 const post = {
@@ -35,7 +36,9 @@ function App() {
               <Post post={post} />
             </Container>
           </Route>
-          <Route path="/about">About</Route>
+          <Route path="/about">
+            <About />
+          </Route>
         </Switch>
 
         <Footer />
