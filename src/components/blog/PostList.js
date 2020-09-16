@@ -12,33 +12,13 @@ const post = {
 
 function PostList() {
   return (
-    <Container>
-      <Row>
-        <Col sm={12} md={6}>
+    <Container fluid="md" className="my-5">
+      <p className="text-primary lead text-center text-underline">All Posts</p>
+      <Row className="justify-content-center">
+        <Col sm={12} md={6} lg={5}>
           <PostPreview post={post} />
         </Col>
-        <Col sm={12} md={6}>
-          <PostPreview post={post} />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12} md={6}>
-          <PostPreview post={post} />
-        </Col>
-        <Col sm={12} md={6}>
-          <PostPreview post={post} />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12} md={6}>
-          <PostPreview post={post} />
-        </Col>
-        <Col sm={12} md={6}>
-          <PostPreview post={post} />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} lg={5}>
           <PostPreview post={post} />
         </Col>
       </Row>
