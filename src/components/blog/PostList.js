@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import PostPreview from './PostPreview';
 
 const post = {
+  _id: 1,
   title: 'Sights And Attractions near Camden Lock Market',
   author: 'Tony Guzman',
   body:
