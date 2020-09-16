@@ -12,10 +12,13 @@ function App() {
         <Navigation />
 
         <Switch>
-          <Route path="/">Homepage</Route>
+          <Route exact path="/">
+            Homepage
+          </Route>
           <Route path="/posts">
             <PostList />
           </Route>
+          <Route path="/about">About</Route>
         </Switch>
 
         <Footer />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
@@ -8,9 +9,15 @@ function Navigation() {
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="ml-auto">
-          <Nav.Link href="#">Home</Nav.Link>
-          <Nav.Link href="#">Posts</Nav.Link>
-          <Nav.Link href="#">About</Nav.Link>
+          <Link to="/" className="p-2 text-secondary text-decoration-none">
+            Home
+          </Link>
+          <Link to="/posts" className="p-2 text-secondary text-decoration-none">
+            Posts
+          </Link>
+          <Link to="/about" className="p-2 text-secondary text-decoration-none">
+            About
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
