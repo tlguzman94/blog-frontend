@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Col, Row } from 'react-bootstrap';
 import moment from 'moment';
 import CommentForm from './comments/CommentForm';
+import CommentList from './comments/CommentList';
 
 function Post({ post, createComment }) {
   return (
@@ -18,6 +19,7 @@ function Post({ post, createComment }) {
           'MMMM D, YYYY'
         )}`}</p>
         <ReactMarkdown source={post.body} />
+        <CommentList comments={post.comments} />
         <CommentForm createComment={createComment} postID={post._id} />
       </Col>
     </Row>

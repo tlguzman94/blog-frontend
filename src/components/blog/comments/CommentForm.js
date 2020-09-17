@@ -13,8 +13,8 @@ function CommentForm({ createComment, postID }) {
   };
 
   return (
-    <div>
-      <h2 className="font-weight-bold">Leave a Comment</h2>
+    <div className="bg-light my-4 p-5">
+      <h4 className="font-weight-bold">Leave a Comment</h4>
 
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="commentAuthor">
