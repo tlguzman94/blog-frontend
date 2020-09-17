@@ -1,13 +1,14 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Link, useRouteMatch } from 'react-router-dom';
 
 function PostPreview({ post }) {
   const { url } = useRouteMatch();
   return (
     <div className="d-flex flex-column my-2">
-      <h4>{post.title}</h4>
-      <p className="text-muted">{`${post.author} - ${post.createdAt}`}</p>
-      <p>{post.body.substring(0, 150)}</p>
+      <ReactMarkdown className="h4" source={post.title} />
+      <p className="text-muted text-capitalize">{`${post.user.first_name} ${post.user.last_name} - ${post.createdAt}`}</p>
+      <ReactMarkdown source={post.body.substring(0, 150)} />
       <Link to={`${url}/${post._id}`}>Continue Reading</Link>
     </div>
   );
