@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 
-function CommentForm({ createComment }) {
+function CommentForm({ createComment, postID }) {
   const [author, setAuthor] = useState('');
   const [body, setBody] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(author, body);
+    createComment(postID, { author, body });
     setAuthor('');
     setBody('');
   };

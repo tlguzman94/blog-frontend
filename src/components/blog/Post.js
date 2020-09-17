@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import moment from 'moment';
 import CommentForm from './comments/CommentForm';
 
-function Post({ post }) {
+function Post({ post, createComment }) {
   return (
     <Row className="justify-content-center">
       <Col md={12} lg={10}>
@@ -18,7 +18,7 @@ function Post({ post }) {
           'MMMM D, YYYY'
         )}`}</p>
         <ReactMarkdown source={post.body} />
-        <CommentForm />
+        <CommentForm createComment={createComment} postID={post._id} />
       </Col>
     </Row>
   );

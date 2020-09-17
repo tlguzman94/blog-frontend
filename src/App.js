@@ -23,6 +23,13 @@ function App() {
     getPosts();
   }, []);
 
+  const handleCreateComment = async (postID, comment) => {
+    const updatedPost = await api.createComment(postID, comment);
+    if (updatedPost) {
+      setPosts(posts.map((post) => (post._id === postID ? updatedPost : post)));
+    }
+  };
+
   return (
     <Router>
       <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
@@ -36,7 +43,7 @@ function App() {
             <PostList posts={posts} />
           </Route>
           <Route path="/posts/:postID">
-            <PostHelper posts={posts} />
+            <PostHelper posts={posts} createComment={handleCreateComment} />
           </Route>
           <Route path="/about">
             <About />
