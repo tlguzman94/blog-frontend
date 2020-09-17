@@ -5,9 +5,8 @@ import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import PostList from './components/blog/PostList';
 import FeaturedPost from './components/blog/FeaturedPost';
-import Post from './components/blog/Post';
+import PostHelper from './components/blog/PostHelper';
 import About from './components/pages/About';
-import { Container } from 'react-bootstrap';
 
 import api from './api';
 
@@ -37,9 +36,7 @@ function App() {
             <PostList posts={posts} />
           </Route>
           <Route path="/posts/:postID">
-            <Container fluid="md" className="my-5">
-              <Post posts={posts} />
-            </Container>
+            <PostHelper posts={posts} />
           </Route>
           <Route path="/about">
             <About />

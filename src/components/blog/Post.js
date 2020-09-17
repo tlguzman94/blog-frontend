@@ -1,18 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
 
-function Post({ posts }) {
-  const { postID } = useParams();
-
-  if (!posts.length) {
-    return (
-      <p className="text-primary lead text-center text-underline">No posts</p>
-    );
-  }
-
-  const post = posts.find((post) => post._id === postID);
-
+function Post({ post }) {
   return (
     <Row className="justify-content-center">
       <Col md={12} lg={10}>
