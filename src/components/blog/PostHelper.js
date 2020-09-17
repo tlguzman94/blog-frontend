@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Post from './Post';
+import NoMatch from '../pages/NoMatch';
 
 function PostHelper({ posts, createComment }) {
   const { postID } = useParams();
@@ -14,7 +15,7 @@ function PostHelper({ posts, createComment }) {
       </Container>
     );
   } else {
-    return <div>no post found</div>;
+    return <NoMatch />;
   }
 }
 

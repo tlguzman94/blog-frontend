@@ -7,7 +7,7 @@ import PostList from './components/blog/PostList';
 import FeaturedPost from './components/blog/FeaturedPost';
 import PostHelper from './components/blog/PostHelper';
 import About from './components/pages/About';
-
+import NoMatch from './components/pages/NoMatch';
 import api from './api';
 
 function App() {
@@ -47,6 +47,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="*">
+            <NoMatch />
           </Route>
         </Switch>
 
