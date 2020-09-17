@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Col, Row } from 'react-bootstrap';
+import moment from 'moment';
 
 function Post({ post }) {
   return (
@@ -10,7 +11,11 @@ function Post({ post }) {
           className="text-center font-weight-bold"
           source={post.title}
         />
-        <p className="text-center text-muted text-capitalize">{`${post.user.first_name} ${post.user.last_name} - ${post.createdAt}`}</p>
+        <p className="text-center text-muted text-capitalize">{`${
+          post.user.first_name
+        } ${post.user.last_name} - ${moment(post.createdAt).format(
+          'MMMM D, YYYY'
+        )}`}</p>
         <ReactMarkdown source={post.body} />
       </Col>
     </Row>
