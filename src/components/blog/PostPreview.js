@@ -6,7 +6,7 @@ import moment from 'moment';
 function PostPreview({ post }) {
   const { url } = useRouteMatch();
   return (
-    <div className="d-flex flex-column my-2">
+    <div className="post-preview d-flex flex-column my-2">
       <ReactMarkdown source={post.title} />
       <p className="text-muted text-capitalize">{`${post.user.first_name} ${
         post.user.last_name
