@@ -9,7 +9,7 @@ function PostList({ posts }) {
       <Row className="justify-content-between">
         {posts &&
           posts.map((post) => (
-            <Col key={post._id} sm={12} md={6}>
+            <Col key={post._id} sm={12} md={6} lg={5} className="mb-3">
               <PostPreview post={post} />
             </Col>
           ))}

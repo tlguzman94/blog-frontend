@@ -7,7 +7,7 @@ function PostPreview({ post }) {
   const { url } = useRouteMatch();
   return (
     <div className="d-flex flex-column my-2">
-      <ReactMarkdown className="h4" source={post.title} />
+      <ReactMarkdown source={post.title} />
       <p className="text-muted text-capitalize">{`${post.user.first_name} ${
         post.user.last_name
       } - ${moment(post.createdAt).format('MMMM D, YYYY')}`}</p>
