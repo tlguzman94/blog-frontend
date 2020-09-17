@@ -7,7 +7,7 @@ function PostPreview({ post }) {
     <div className="d-flex flex-column my-2">
       <h4>{post.title}</h4>
       <p className="text-muted">{`${post.author} - ${post.createdAt}`}</p>
-      <p>{post.body}</p>
+      <p>{post.body.substring(0, 150)}</p>
       <Link to={`${url}/${post._id}`}>Continue Reading</Link>
     </div>
   );
