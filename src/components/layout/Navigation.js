@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <Navbar bg="light" variant="light" expand="sm">
+    <Navbar variant="light" expand="sm" className="container-lg py-3">
       <Link to="/" className="navbar-brand">
         React Blog
       </Link>
