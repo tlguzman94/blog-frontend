@@ -45,7 +45,7 @@ function App() {
           <Route path="/posts/:postID">
             <PostHelper posts={posts} createComment={handleCreateComment} />
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
           <Route path="*">
