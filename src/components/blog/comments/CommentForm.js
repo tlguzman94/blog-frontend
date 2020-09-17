@@ -7,7 +7,11 @@ function CommentForm({ createComment, postID }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    createComment(postID, { author, body });
+    if (author.length) {
+      createComment(postID, { author, body });
+    } else {
+      createComment(postID, { body });
+    }
     setAuthor('');
     setBody('');
   };
